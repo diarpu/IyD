@@ -1,0 +1,37 @@
+{
+  "name": "iyd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@squoosh/cli": "^0.7.2",
+    "autoprefixer": "^10.3.6",
+    "critical": "^4.0.1",
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-purgecss": "^3.0.0",
+    "postcss-cli": "^9.0.1",
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "dev": "run-s dev:parcel",
+    "dev:parcel": "parcel src/index.html --public-url ./",
+    "surge:dev": "surge ./dist iyd.surge.sh",
+    "surge:build": "surge ./public iyd.surge.sh",
+
+    "build": "run-s build:parcel autoprefixer critical",
+    "build:surge": "run-s build:parcel autoprefixer critical surge:build clear:build",
+    "build:parcel": "parcel build ./src/index.html ./src/images/*.* ./src/images/logos/*.* ./src/fonts/*.* ./src/videos/*.* --out-dir ./public/ --public-url ./ --no-source-maps --no-cache --no-content-hash",
+    
+    "critical": "node critical.js",
+    "clear:build": "rimraf ./public",
+    "clear:dev": "rimraf ./dist",
+    "autoprefixer": "npx postcss ./public/*.css --use autoprefixer -d public/",
+    "surge:teardown": "surge teardown iyd.surge.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+
+  }
+}

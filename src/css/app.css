@@ -1,0 +1,21 @@
+@import '../_components/css/_grid-includes/_base.css';
+
+.d-flex{
+    display: flex
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+@import './assets.min.css';
+@import './style.min.css';
+
+input:hover{
+    box-shadow: none;
+}
+
+@import './form.css';
+
+
+
