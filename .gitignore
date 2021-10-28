@@ -8,6 +8,8 @@ src/_components/js
 .htmlnanorc.js
 
 dist/
+src/
+php/
 
 purgecss.config.js
 
