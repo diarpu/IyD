@@ -657,7 +657,7 @@
                     </div>
                 </div>
                 <div class="row d-flex justify-content-center">
-                    <form id="form-contact" action="dist/plugins/php/submit.php" method="POST" class="col-sm-6">
+                    <form id="form-contact" action="./php/submit.php" method="POST" class="col-sm-6">
                         <div class="hero-form">
                             <div class="form-group from-group--with-label">
                                 <label for="selectSize" class="form-label">Nombre</label>
@@ -676,12 +676,12 @@
                             <div class="form-group from-group--with-label">
                                 <label for="selectSize" class="form-label">Celular / Whatsapp</label>
                                 <input type="tel" name="phone" id="phone" class="form-control" id="inputName1"
-                                    placeholder="+5198765432" required autocomplete="off" minlength="5" maxlength="16">
+                                    placeholder="+5198765432" required autocomplete="off" minlength="5">
                             </div>
                 
                             <div class="form-group from-group--with-label">
                                 <label for="selectSize" class="form-label">Servicio</label>
-                                <select class="form-control" name="ciudad" required>
+                                <select class="form-control" name="subject" required>
                                     <option value="" disabled selected="selected">Seleccionar *</option>
                                     <option value="Trabajo de Investigación / Tesis">Trabajo de Investigación / Tesis</option>
                                     <option value="Plan de Negocio">Plan de Negocio</option>
@@ -701,7 +701,7 @@
                                 <button id="submit" class="btn-primary"><span>Enviar</span></button>
                             </div> -->
                             <div class="form-btn">
-                                <button type="submit" class="rocket-btn rocket-btn-animated-icon rocket-btn-fixed-width">
+                                <button id="submit" type="submit" class="rocket-btn rocket-btn-animated-icon rocket-btn-fixed-width">
                                         <span class="rocket-btn-icon-wrap"><i class="fa fa-rocket"
                                                 aria-hidden="true"></i></span>
                                         <span class="rocket-btn-text-wrap">Enviar</span>

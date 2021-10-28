@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 import './main.min.js'
+import './mail.js'
 
 if (module.hot) {
     module.hot.accept();
